@@ -1,0 +1,15 @@
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    height: 200px;
+    gap: 20px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 15%;
+    background-color: #aebbec;
+    border-radius: 15px;
+}
