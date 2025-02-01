@@ -14,7 +14,7 @@ export const Login = () => {
 
 
     if(isAuthorize){
-        return <Navigate to={'/todolist'}/>
+        return <Navigate to={'/'}/>
     }
 
     const onClick = () => {

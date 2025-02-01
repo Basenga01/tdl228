@@ -1,17 +1,25 @@
 import {createSlice, isPending, isRejected} from "@reduxjs/toolkit";
 import {signIn} from "../api/signIn.ts";
 import {authMe} from "../api/authMe.ts";
+import {delToken} from "../../../shered/api";
+
+const initialState = {
+    isAuthorize: false,
+    isInit: false,
+    Load: false,
+    firstName: '',
+    lastName: '',
+}
 
 export const userSlice = createSlice({
     name: "133455A",
-    initialState: {
-        isAuthorize: false,
-        isInit: false,
-        Load: true,
-        firstName: '',
-        lastName: '',
+    initialState,
+    reducers: {
+        logOut: (state) => {
+            delToken()
+            state.isAuthorize = false
+        }
     },
-    reducers: {},
     extraReducers: (builder) => {
 
 
@@ -39,3 +47,4 @@ export const userSlice = createSlice({
             })
     }
 })
+export const { logOut } = userSlice.actions;
