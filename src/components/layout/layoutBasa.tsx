@@ -18,7 +18,7 @@ export const LayoutBasa = ({ outlet }:Props)=> {
                 </div>
             </div>
             <div>
-                <div>sidebar</div>
+                <div>tododdododo</div>
                 <div>{outlet}</div>
             </div>
             <div>Basement</div>
