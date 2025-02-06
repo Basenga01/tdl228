@@ -1,7 +1,5 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {AppWrapper} from './App.tsx'
+import { AppWrapper } from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(
-    <AppWrapper />
-)
+createRoot(document.getElementById('root')!).render(<AppWrapper />)

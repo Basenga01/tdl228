@@ -1,7 +1,5 @@
-
-import {Todolist} from "./todolist/todolist.tsx";
-
+import { Todolist } from './todolist/todolist.tsx'
 
 export const Todolists = () => {
-    return <Todolist></Todolist>
+  return <Todolist></Todolist>
 }
