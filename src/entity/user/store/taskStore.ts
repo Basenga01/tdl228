@@ -4,12 +4,12 @@ import { TaskType } from '../../../types/taskType.ts'
 
 interface InitialStateType {
   Load: boolean
-  task: TaskType[]
+  task: Record<string, TaskType[]>
 }
 
 const initialState: InitialStateType = {
   Load: false,
-  task: [],
+  task: {},
 }
 export const taskSlice = createSlice({
   name: 'task',
@@ -17,7 +17,16 @@ export const taskSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getTask.fulfilled, (state, action) => {
-      state.task = action.payload
+      const tasks = action.payload
+      const newObject: Record<string, TaskType[]> = {}
+      tasks.forEach((task) => {
+        if (!newObject[task.todolistId]) {
+          newObject[task.todolistId] = [task]
+        } else {
+          newObject[task.todolistId] = [...newObject[task.todolistId], task]
+        }
+      })
+      state.task = newObject
     })
   },
 })
