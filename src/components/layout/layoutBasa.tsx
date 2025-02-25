@@ -1,31 +1,22 @@
 import { ReactNode } from 'react'
-import { Button } from 'antd'
-import { useAppDispatch } from '../../app/rootStore.ts'
-import { logOut } from '../../entity/user/store/userStore.ts'
+import css from './Layout.module.css'
 
 interface Props {
   outlet: ReactNode
+  header: ReactNode
+  footer: ReactNode
+  sidebar: ReactNode
 }
-export const LayoutBasa = ({ outlet }: Props) => {
-  const dispatch = useAppDispatch()
+
+export const LayoutBasa = ({ outlet, footer, header, sidebar }: Props) => {
   return (
-    <div>
-      <div>
-        <div>
-          <Button
-            onClick={() => {
-              dispatch(logOut())
-            }}
-          >
-            LogOut
-          </Button>
-        </div>
+    <div className={css.container}>
+      <div className={css.header}>{header}</div>
+      <div className={css.content}>
+        <div className={css.sidebar}>{sidebar}</div>
+        <div className={css.outlet}>{outlet}</div>
       </div>
-      <div>
-        <div>tododdododo</div>
-        <div>{outlet}</div>
-      </div>
-      <div>Basement</div>
+      <div className={css.footer}>{footer}</div>
     </div>
   )
 }

@@ -1,0 +1,7 @@
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style-type: none;
+    background-color: #a7e3de;
+}

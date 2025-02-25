@@ -3,7 +3,8 @@ import { useEffect } from 'react'
 import { getTdl } from '../../../entity/todolist/getTdl.ts'
 import { TodolistType } from '../../../types/tdlType.ts'
 import { getTask } from '../../../entity/task/getTask.ts'
-import {Tasks} from "../../tasks/task.tsx";
+import { Tasks } from '../../tasks/task.tsx'
+import css from './Todolist.module.css'
 
 export const Todolist = () => {
   const { tdls } = useAppSelector((state) => state.tdlReducer)
@@ -13,10 +14,10 @@ export const Todolist = () => {
     dispatch(getTask())
   }, [])
   return (
-    <div>
-      <ul>
+    <div className={css.containerTodolist}>
+      <ul className={css.todolist}>
         {tdls.map((tdl: TodolistType) => (
-          <li key={tdl.id}>
+          <li className={css.todolistElement} key={tdl.id}>
             {tdl.title}
             <Tasks todolistId={tdl.id} />
           </li>

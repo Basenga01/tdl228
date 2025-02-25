@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid #dd2d2d;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.outlet {
+    padding: 16px;
+    background-color: lightgray;
+    flex-grow: 1;
+}
+
+.header {
+    background-color: #b9a7e8;
+    padding: 10px;
+}
+
+.footer {
+    background-color: #b7dab4;
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: #b4dfec;
+    padding: 10px;
+}

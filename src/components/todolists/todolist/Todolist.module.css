@@ -1,0 +1,17 @@
+.containerTodolist{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.todolist{
+    display: flex;
+    flex-direction: row;
+    background-color: #b7dab4;
+    border: 1px solid black;
+    list-style-type: none;
+    gap: 50px;
+
+}
+.todolistElement{
+    background-color: #b5c3ed;
+}
