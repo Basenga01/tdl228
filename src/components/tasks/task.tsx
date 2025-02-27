@@ -17,9 +17,8 @@ export const Tasks = ({ todolistId }: Props) => {
   return (
     <ul className={css.taskContainer}>
       {tasks.map((task: TaskType) => (
-        <li key={task.id}>
-          {task.title}
-          {task.description}
+        <li className={css.task} key={task.id}>
+         <div className={css.title}>{task.title || '-'}</div>
         </li>
       ))}
     </ul>

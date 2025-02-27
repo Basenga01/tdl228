@@ -14,15 +14,13 @@ export const Todolist = () => {
     dispatch(getTask())
   }, [])
   return (
-    <div className={css.containerTodolist}>
-      <ul className={css.todolist}>
-        {tdls.map((tdl: TodolistType) => (
-          <li className={css.todolistElement} key={tdl.id}>
-            {tdl.title}
-            <Tasks todolistId={tdl.id} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={css.todolistContainer}>
+      {tdls.map((tdl: TodolistType) => (
+        <li className={css.todolist} key={tdl.id}>
+          <div className={css.title}>{tdl.title}</div>
+          <Tasks todolistId={tdl.id} />
+        </li>
+      ))}
+    </ul>
   )
 }

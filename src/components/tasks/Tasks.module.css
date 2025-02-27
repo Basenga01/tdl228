@@ -1,7 +1,10 @@
 .taskContainer{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     list-style-type: none;
+}
+.title{
+    padding: 8px 10px;
     background-color: #a7e3de;
 }
