@@ -1,5 +1,13 @@
-import { Todolist } from './todolist/todolist.tsx'
+import { Todolist } from './todolist'
+import { AddNewElement } from '../../shered'
 
 export const Todolists = () => {
-  return <Todolist/>
+  const onClickAddTodolist = (title: string) =>{
+    console.log(title)
+  }
+  return (
+    <div>
+      <AddNewElement onClickAddElement={onClickAddTodolist}/><Todolist/>
+    </div>
+  )
 }
