@@ -1,0 +1,1 @@
+export { LayoutBasa } from './layoutBasa'

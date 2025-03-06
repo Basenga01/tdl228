@@ -7,3 +7,12 @@ export interface TaskType {
   title: string
   dueDate: string
 }
+export interface TaskRequest {
+  id: string
+  is_completed: true
+  created_at: string
+  description: string
+  todolist_id: string
+  title: string
+  due_date: string
+}

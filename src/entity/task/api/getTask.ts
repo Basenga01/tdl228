@@ -1,16 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { apiInstance } from '../../shered/api'
-import { TaskType } from '../../types/taskType.ts'
-
-interface TaskRequest {
-  id: string
-  is_completed: true
-  created_at: string
-  description: string
-  todolist_id: string
-  title: string
-  due_date: string
-}
+import { apiInstance } from '../../../shered/api'
+import { TaskRequest, TaskType } from '../../../types/taskType.ts'
 
 const convert = (data: TaskRequest[]): TaskType[] => {
   return data.map((el) => {

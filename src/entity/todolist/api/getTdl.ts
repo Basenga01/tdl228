@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { apiInstance } from '../../shered/api'
-import { TodolistType } from '../../types/tdlType.ts'
+import { apiInstance } from '../../../shered/api'
+import { TodolistType } from '../../../types/tdlType.ts'
 
 interface TodolistRequest {
   id: string

@@ -1,8 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { userSlice } from '../entity/user/store/userStore.ts'
+import { taskSlice, tdlSlice, userSlice } from '../entity'
 import { useDispatch, useSelector } from 'react-redux'
-import { tdlSlice } from '../entity/user/store/tdlStore.ts'
-import { taskSlice } from '../entity/user/store/taskStore.ts'
 
 export const store = configureStore({
   reducer: {

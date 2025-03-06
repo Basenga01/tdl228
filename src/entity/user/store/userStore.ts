@@ -1,6 +1,5 @@
 import { createSlice, isPending, isRejected } from '@reduxjs/toolkit'
-import { signIn } from '../api/signIn.ts'
-import { authMe } from '../api/authMe.ts'
+import { authMe, signIn } from '../api'
 import { delToken } from '../../../shered/api'
 
 interface InitialStateType {
